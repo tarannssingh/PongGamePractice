@@ -2,7 +2,7 @@
 import java.awt.*;
 import java.awt.event.*;
 import java.util.*;
-import.swing.*;
+import javax.swing.*;
 
 public class GameFrame extends JFrame
 {
@@ -13,13 +13,15 @@ public class GameFrame extends JFrame
     {
         // ?? Why is panel no intialized on top
         panel = new GamePanel();
-        this.add(Panel);
-        this.setTtitle("Pong Game");
-        this.SetResizable(false);
+        this.add(panel);
+        this.setTitle("Pong Game");
+        this.setResizable(false);
         this.setBackground(Color.black);
-        this.setDefaultCloseOperation(JFrame.EXIST_ON_CLOSE);
-        this.pack()
-        this.setVisable(True);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.pack();  
+        // makes the window go to the middle      
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
 
     }
 }
